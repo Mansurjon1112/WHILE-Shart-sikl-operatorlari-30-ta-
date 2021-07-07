@@ -1,0 +1,63 @@
+"""
+While16. Sportsmen birinchi kuni 10 km yugirib boshladi. Keyingi kunlari bir oldingi kunga nisbatan
+p foiz ko’p yugurdi (0 < p < 50). Sportsmenning necha kundan keyin jami yugurgan masogasi 200
+km dan oshadi? Jami kunlar soni va masofani (butun son) chiqaruvchi programma tuzilsin.
+
+p=int(input('p='))
+if 0<p<50 :
+    n = 10 # kunlik yurgani 
+    k = 0 # kun 
+    sum = 0 # jami 
+    while sum < 200:
+        k+=1
+        sum += n
+        n=n*(1+p/100)
+    print("{} kunda jami yurgan masofasi {:0.2f}".format(k,sum))
+else:
+    print('Xato kiritildi!')    
+
+
+While17. n va m butun musbat sonlari berilgan (n > m). n sonini m soniga bo’lib butun va qoldiq
+qismlarini bo’lish va qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+
+n =int(input('n='))
+m =int(input('m='))
+if n>0 and m>0 : 
+    s=0
+    while n>=m :
+        n=n-m
+        s+=1        
+    print('Butun qism',s,'qoldiq ',n)
+else:
+    print('Musbat son kiriting!')
+
+
+While18. n butun soni berilgan (n > 0). Bo’lib butun va qoldiq qismlarini aniqlash orqali, berilgan son
+raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
+
+n=int(input('n='))
+if n>0:
+    s=0
+    while n>0:
+        oxirgi = n % 10
+        n=n//10
+        s=s*10 + oxirgi
+    print(s)        
+else:
+    print('Masala shartiga mos son kirit!')    
+
+#19
+n=int(input('n='))
+if n>0:
+    s=0 #yig'indini hisoblash uchun 
+    k=0 # xonani aniqlash uchun
+    while n>0:
+        oxirgi = n % 10 #oxirgi raqam 
+        n=n//10 
+        s= s + oxirgi #yig'indi (sonning oxirgi raqamlarini qo'shib boradi)
+        k+=1  #har bir takrorlanish xona uzunligiga teng.
+    print("{} xonali va yig'indisi: {}".format(k,s))        
+    print(k,'xonali va yig`indisi:',s)
+else:
+    print('Masala shartiga mos son kirit!')    
+"""    
