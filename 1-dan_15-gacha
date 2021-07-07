@@ -1,0 +1,258 @@
+
+#`1
+a = int(input('a: '))
+b = int(input('b: '))
+if a > b:
+    while a >= b:
+        a = a-b
+    print(a)
+    if a == 0:
+        print("qolmadi")
+else:
+    print('a b dan katta bolsin')
+"""
+
+"""
+While2. A va B butun musbat sonlari berilgan ( A > B). A usunlikdagi kesmada B kesmadan nechta
+joylashtirish mumkinligini aniqlovchi programma tuzilsin. Ko’paytirish va bo’lish amallarini
+ishlatmang.
+
+a = int(input('a: '))
+b = int(input('b: '))
+s = 0 
+if a > b:
+    while a >= b:
+        a = a-b
+        s += 1 
+    print(s)
+else:
+    print('a b dan katta bolsin')
+"""
+
+""" While3. N va K butun musbat sonlari berilgan. Faqat ayirish va qo’shish amallarini ishlatib N sonini
+K soniga bo’lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
+n =int(input('n='))
+k =int(input('k='))
+if n>0 and k>0 : 
+    s=0
+    while n>=k :
+        n=n-k
+        s+=1
+        
+    print('Butun qism',s,'qoldiq ',n)
+else:
+    print('Musbat son kiriting!')
+    """
+"""While4. n butun soni berilgan (n > 0). Agar n soni 3 ning darajasi bo’lsa “3 – ning darajasi”, aks
+xolda “3 – ning darajasi emas” degan natija chiqaruvchi programma tuzilsin. Qoldiqli bo'lish va
+bo’lish amallarini ishlatmang.
+
+
+n=int(input('n='))    
+if n>0:
+    qadam=0
+    p=1
+    while n>p:
+        #qadam+=1
+        #print(qadam,') n>p',n>p, ' n=',n,'p=',p)
+        p*=3
+        #print(p)      
+        
+    if n == p :
+        print('3 ning darajasi')
+    else: 
+        print('3 ning darajasi emas ')
+    
+else:
+    print('n>0 kiriting!')    
+"""
+
+""" While5. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2k . k ni
+aniqlovchi programma tuzilsin.
+
+n=int(input("n="))
+p=1
+k=0 #darajasini aniqlash uchun 
+if n>0:
+    while n>p:
+        p=p*2
+        k+=1
+        print(k,'-darajasi ',p)
+    if n==p:
+        print("Darajasi=",k)
+    else:
+        print("n soni 2 ning darajasi emas")
+else:
+    print("n soni 0 dan katta")
+"""
+"""
+While6. n natural soni berilgan (n > 0). Quyidagi ifodani hisoblovchi programma tuzilsin:
+n!! = n * (n - 2) * (n - 4) …
+Agar n juft bo’lsa oxirgi ko’payuvchi 2, toq bo’lsa 1 bo’ladi.
+
+
+n=int(input('n='))
+p=1
+if n>0 :
+    while n>=1:
+        p=p*n
+        n=n-2
+    print(p)
+else:
+    print('N>0 kiriting!')    
+   """ 
+"""
+While7. n natural soni berilgan (n > 0). Kvadrati n dan katta bo’ladigan eng kichik butun k sonini (k2
+> n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.    
+
+n=26
+1^2 < 26
+2^2 < 26
+3^2 < 26
+5^2 < 26
+6^2 > 26
+k=6
+...
+n=50
+k=8
+
+n=int(input('n='))
+if n > 0:
+    k=1
+    while k*k<=n:
+        k+=1
+    print(k)
+else:
+    print('Masala shartiga mos son kiriting!')
+"""
+    
+'''
+While8. n natural soni berilgan (n > 0). Kvadrati n dan katta bo’lmagan eng katta butun k sonini
+(k2 <= n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.
+
+n=int(input("n="))
+
+if n>0:
+    k=1
+    
+    while (k+1) * (k+1) <= n:
+        k += 1
+    print(k)
+
+else:
+    print('n>0 bulsin')
+
+While9. n natural soni berilgan (n > 1). 3k > n shartni qanoatlantiruvchi eng kichik butun k sonini
+aniqlovchi programma tuzilsin.
+
+n=int(input('n='))
+if n > 0:
+    k=0
+    p=1
+    while p<=n:
+        k+=1
+        p*=3
+    print(k)
+else:
+    print('Masala shartiga mos son kiriting!')
+
+
+n=int(input('n='))
+if n > 0:
+    k=1 #daraja o'rnida 
+    while 3**k<=n:
+        k+=1
+    print(k)
+else:
+    print('Masala shartiga mos son kiriting!')
+    
+n=26
+3^1 < 26
+3^2 < 26
+3^3 > 26
+3^4 > 26
+3^5 > 26
+
+'''
+""" 
+While11. n natural soni berilgan (n > 1). (1 + 2 + 3 + … + k) >= n shart bajariladigan eng kichik k
+sonini aniqlovchi programma tuzilsin. 1 dan k gacha bo’lgan yig’indi ham ekranga chiqarilsin.
+"""
+"""
+n=int(input('n='))
+s=0
+if n > 1:
+    k=0
+    
+    while s<n:
+        k+=1
+        s=s+k
+        print("{} ) k={}, s={}, s<n".format(k,k,s),s<n)
+        
+    print(k, "yig`indi",s)
+else:
+    print('Masala shartiga mos son kiriting!')
+
+"""
+"""
+While12. n natural soni berilgan (n > 1). (1 + 2 + 3 + … + k) <= n shart bajariladigan eng katta k
+sonini aniqlovchi programma tuzilsin. 1 dan k gacha bo’lgan yig’indi ham ekranga chiqarilsin.    
+
+n=int(input('n='))
+s=0
+if n > 1:
+    k=0
+    
+    while s + (k+1) <= n:
+        k+=1
+        s=s+k
+        print("{} ) k={}, s={}, s+(k+1)<n".format(k,k,s),s+(k+1)<n)
+        
+    print(k, "yig`indi",s)
+else:
+    print('Masala shartiga mos son kiriting!')
+
+#13
+n=float(input('n='))
+s=0
+if n > 1:
+    k=0   
+    while s<n:
+        k+=1
+        s=s+1/k              
+  #      print("{} ) k={}, s={}, s<n".format(k,k,s),s<n)
+    print(k, "yig`indi",s)
+else:
+    print('Masala shartiga mos son kiriting!')
+
+
+
+
+#14
+n=int(input("n="))
+if n>1:
+    k=0
+    s=0
+    while s +1/(k+1)<=n:
+        k += 1
+        s=s+1/k
+    print("k=", k)
+    print("yig'indi=",s)
+else:
+    print('n>0 bulsin')
+    
+    
+"""
+
+#15
+s=int(input('Pul='))
+p=int(input('Foiz='))
+if 0<p<25:
+    k=0
+    sum = 0
+    while sum <= s:
+        k+=1
+        sum = s*p*k/100
+    print(k)        
+else:
+    print('Fozi 0 dan baland 25 dan past bo\'lsin')
