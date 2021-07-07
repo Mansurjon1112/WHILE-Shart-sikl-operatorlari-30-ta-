@@ -15,9 +15,9 @@ c=int(input('c='))
 
 if a>0 and b>0 and c>0 :
     sanoq=0
-    while a>c:
+    while a>=c:
         d=b
-        while d>c:
+        while d>=c:
             sanoq+=1
             d-=c
         a-=c
