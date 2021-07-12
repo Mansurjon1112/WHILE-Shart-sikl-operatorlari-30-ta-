@@ -111,6 +111,8 @@ while abs(a-a1)>=e:
     a=2+1/a1
     a1,a=a,a1
 print(k)    
+print(a)
+print(a1) 
 """
 #30
 a=int(input('A='))
